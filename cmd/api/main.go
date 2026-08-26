@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+// server is build
+import (
+	"log"
+	"net/http"
+)
 
 func main() {
-	fmt.Println("hey!!")
+	err := http.ListenAndServe(":8090", nil)
+	if err != nil {
+		log.Fatalf("server failed: %v", err)
+	}
 }
+
+// error 404 bec no end point is defined.
