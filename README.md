@@ -2,9 +2,8 @@
 
 Backend foundation for a marketplace-style listing platform, built in Go.
 
-> This repository is currently in the project setup stage. The executable is a
-> small Go proof of life that prints `hey!!`; the HTTP API and persistence layer
-> will be added in subsequent milestones.
+> Day 2 adds the first HTTP server and health-check endpoint. Persistence and
+> marketplace features will be added in subsequent milestones.
 
 ## Day 1: System Design & Setup
 
@@ -15,6 +14,13 @@ Backend foundation for a marketplace-style listing platform, built in Go.
 	Cloudflare R2, and a CDN.
 - [x] **Project initialization:** Create the Go module, application entry point,
 	Makefile targets, and build output directory.
+
+## Day 2: HTTP Server Foundation
+
+- [x] Add an HTTP server listening on port `8090`.
+- [x] Add `GET /healthz` for service health checks.
+- [x] Return a JSON `200 OK` response from the health-check endpoint.
+- [x] Configure read, write, and idle server timeouts.
 
 ## Project Direction
 
